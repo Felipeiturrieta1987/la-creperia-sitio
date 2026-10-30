@@ -1,0 +1,10 @@
+{
+  "name": "la-creperia-sitio",
+  "main": "public/_worker.js",
+  "compatibility_date": "2025-01-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": true },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "carta", "database_id": "8fe5a27b-e1be-405c-a9e9-d32b6b9129b6" }
+  ],
+  "keep_vars": true
+}
