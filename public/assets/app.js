@@ -573,10 +573,42 @@
   /* --- QR --- */
   function adminQR() {
     var url = location.origin + '/';
+    setTimeout(drawQR, 0);
     return '<div class="card qr"><h3>Código QR de la carta</h3><p class="help">Imprímelo para las mesas. Lleva a <b>' + esc(url) + '</b></p>' +
-      '<img src="/qr.svg" alt="Código QR de la carta" width="240" height="240">' +
-      '<div class="toolbar"><a class="btn primary" href="/qr.png" download>Descargar PNG</a><a class="btn" href="/qr.svg?download=1" download>Descargar SVG</a>' +
+      '<div class="qrbox" id="lc-qr" role="img" aria-label="Código QR de la carta"><span class="spin"></span></div>' +
+      '<div class="toolbar"><button class="btn primary" type="button" data-act="qr-png">Descargar PNG</button><button class="btn" type="button" data-act="qr-svg">Descargar SVG</button>' +
       '<button class="btn" type="button" data-act="copy-url">Copiar enlace</button></div></div>';
+  }
+  function loadQRLib() {
+    if (window.qrcode) return Promise.resolve();
+    return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = '/assets/qrcode.js'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  }
+  function qrSvg() {
+    var q = window.qrcode(0, 'M'); q.addData(location.origin + '/'); q.make();
+    return q.createSvgTag({ cellSize: 8, margin: 3, scalable: true }).replace(/fill="black"/g, 'fill="#033555"').replace(/#000000/g, '#033555');
+  }
+  function drawQR() {
+    var box = $('#lc-qr'); if (!box) return;
+    loadQRLib().then(function () { box.innerHTML = qrSvg(); }, function () { box.textContent = 'No se pudo generar el código QR.'; });
+  }
+  function saveBlob(blob, name) {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+  }
+  function downloadQR(kind) {
+    loadQRLib().then(function () {
+      var svg = qrSvg(), blob = new Blob([svg], { type: 'image/svg+xml' });
+      if (kind === 'svg') return saveBlob(blob, 'qr-carta-la-creperia.svg');
+      var url = URL.createObjectURL(blob), im = new Image();
+      im.onload = function () {
+        var cv = document.createElement('canvas'); cv.width = cv.height = 1200;
+        var cx = cv.getContext('2d'); cx.fillStyle = '#fff'; cx.fillRect(0, 0, 1200, 1200); cx.drawImage(im, 0, 0, 1200, 1200);
+        URL.revokeObjectURL(url);
+        cv.toBlob(function (b) { if (b) saveBlob(b, 'qr-carta-la-creperia.png'); }, 'image/png');
+      };
+      im.src = url;
+    });
   }
 
   /* --- eventos del panel --- */
@@ -693,6 +725,8 @@
       case 'bulk-stop': if (A.bulk) A.bulk.stop = true; return;
       case 'restore': A.confirm = 'restore:' + v; renderAdmin(); return;
       case 'restore-yes': restore(v); return;
+      case 'qr-png': downloadQR('png'); return;
+      case 'qr-svg': downloadQR('svg'); return;
       case 'copy-url':
         var u = location.origin + '/';
         if (navigator.clipboard) navigator.clipboard.writeText(u).then(function () { t.textContent = 'Enlace copiado'; }, function () { t.textContent = u; });

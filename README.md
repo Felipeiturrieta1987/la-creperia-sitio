@@ -2,67 +2,64 @@
 
 Sitio web de la carta con panel de administración.
 
-- **Carta pública** (`/`): buscador, filtros, fotos, armador "Arma tu Bowl" y código QR.
-- **Panel** (`/admin`): entras con contraseña y desde ahí puedes:
-  - editar productos, precios, categorías y datos del local;
-  - marcar productos como agotados;
-  - subir fotos o crear y mejorar fotos con IA;
-  - ver el historial de versiones y restaurar una anterior;
-  - descargar el código QR.
-- Los datos y las fotos se guardan en una base de datos SQLite dentro del servidor.
+**Carta pública (`/`):**
+
+- buscador y filtros;
+- fotos de los productos;
+- armador "Arma tu Bowl".
+
+**Panel (`/admin`), con contraseña:**
+
+- editar productos, precios, categorías y datos del local;
+- marcar productos como agotados;
+- subir fotos o mejorarlas con IA;
+- historial de versiones;
+- código QR para las mesas.
+
+El proyecto funciona de dos formas: **gratis en Cloudflare** (recomendada) o en un servidor Node como Railway o Render.
 
 ---
 
-## Publicarlo en Railway (unos 10 minutos)
+## Opción gratis: Cloudflare Pages + D1
 
-### 1. Sube el proyecto
+No necesitas tarjeta. El plan gratis permite 100.000 visitas al día, el sitio no se apaga y carga rápido desde Chile.
 
-Elige **una** de estas dos opciones.
+### 1. Crea la cuenta y la base de datos
 
-**Opción A, con GitHub (recomendada):**
+1. Crea una cuenta gratis en **dash.cloudflare.com/sign-up**.
+2. En el menú izquierdo entra a **Storage & Databases → D1 SQL Database**.
+3. Toca **Create**, ponle de nombre **carta** y toca **Create**.
 
-1. Crea un repositorio nuevo en github.com (puede ser privado).
-2. Toca **"uploading an existing file"** y arrastra **todo el contenido** de esta carpeta.
-   - No subas la carpeta `node_modules` si existe.
-3. Confirma con **Commit changes**.
-4. En railway.app ve a **New Project → Deploy from GitHub repo** y elige ese repositorio.
+### 2. Conecta el repositorio de GitHub
 
-**Opción B, con la terminal (Railway CLI):**
+1. En el menú entra a **Workers & Pages → Create** y elige la pestaña **Pages**. Si solo ves Workers, toca el enlace "Looking to deploy Pages? Get started".
+2. Toca **Import an existing Git repository**, autoriza GitHub y elige `la-creperia-sitio`.
+3. En la configuración:
+   - Project name: `la-creperia`, que queda como `la-creperia.pages.dev`.
+   - Framework preset: **None**.
+   - Build command: déjalo **vacío**.
+   - Build output directory: **`public`**.
+4. Abre **Environment variables** y agrega `ADMIN_PASSWORD` con tu contraseña.
+5. Toca **Save and Deploy**.
 
-```bash
-npm i -g @railway/cli
-railway login
-railway init        # crea el proyecto
-railway up          # sube esta carpeta
-```
+### 3. Conecta la base de datos al sitio
 
-Railway detecta el `Dockerfile` y construye el sitio solo.
+1. En el proyecto, ve a **Settings → Bindings → Add → D1 database**.
+2. En Variable name escribe **`DB`** y en la base de datos elige **carta**. Guarda.
+3. Ve a **Deployments**, abre el menú `···` del último deploy y toca **Retry deployment**. Así se aplica la conexión.
 
-### 2. Agrega un volumen (obligatorio para no perder cambios)
+### 4. Listo
 
-1. En el proyecto, haz clic derecho sobre el servicio y elige **Attach Volume**. También puedes usar `Ctrl/⌘ + K` y escribir "Volume".
-2. Mount path: **`/data`**
+- Carta: `https://la-creperia.pages.dev`
+- Panel: `https://la-creperia.pages.dev/admin`
 
-Sin volumen, cada redeploy borra los cambios que hiciste en el panel.
+Si al abrir la carta ves "Casi listo", falta el paso 3: la conexión `DB` o el redeploy.
 
-### 3. Variables (pestaña **Variables** del servicio)
+**Fotos con IA:** en **Settings → Variables and Secrets** agrega `OPENAI_API_KEY` como Secret y vuelve a hacer **Retry deployment**.
 
-| Variable | Obligatoria | Para qué sirve |
-|---|---|---|
-| `ADMIN_PASSWORD` | Sí | La contraseña del panel `/admin`. Usa una larga. |
-| `OPENAI_API_KEY` | No | Activa los botones de fotos con IA. |
-| `SITE_URL` | No | Tu dominio final, por ejemplo `https://carta.lacreperia.cl`. Se usa para el QR. |
-| `OPENAI_IMAGE_QUALITY` | No | `low`, `medium` (por defecto) o `high`. A más calidad, más costo. |
-| `OPENAI_IMAGE_MODEL` | No | Modelo de imágenes. Por defecto `gpt-image-1`. |
+**Dominio propio:** ve a **Custom domains → Set up a custom domain**.
 
-### 4. Dominio
-
-En **Settings → Networking**:
-
-- toca **Generate Domain** para obtener un enlace `*.up.railway.app`; o
-- toca **Custom Domain** para usar tu propio dominio.
-
-Listo. Entra a `https://TU-DOMINIO/admin` con tu contraseña.
+**Actualizar el sitio:** cada vez que subes archivos nuevos al repositorio de GitHub, Cloudflare publica la nueva versión solo. Lo que editas en el panel queda en la base de datos y no se pierde.
 
 ---
 
@@ -70,36 +67,32 @@ Listo. Entra a `https://TU-DOMINIO/admin` con tu contraseña.
 
 El panel tiene una pestaña **"Fotos con IA"** con tres botones:
 
-- **Mejorar con IA:** toma la foto actual como referencia y crea una versión nítida, con luz natural y sin brillos de la carta impresa.
-- **Crear foto con IA:** genera una foto para un producto que no tiene, a partir del nombre y la descripción.
+- **Mejorar con IA:** crea una versión nítida y profesional del mismo plato a partir de la foto actual.
+- **Crear foto con IA:** genera una foto para un producto que no tiene, usando el nombre y la descripción.
 - **Mejorar todas las fotos:** procesa todas las fotos una por una.
 
-Puedes escribir indicaciones en el campo **"Indicaciones para la IA"** de cada producto, por ejemplo "vista desde arriba" o "en plato blanco". Si no te gusta el resultado, toca **"Volver a la foto anterior"**. Nada se publica hasta que tocas **Publicar cambios**.
+Puedes dar indicaciones para la IA ("vista desde arriba", "en plato blanco") y volver a la foto anterior si no te gusta. Nada se publica hasta que tocas **Publicar cambios**.
 
 ### Cómo obtener la API key
 
-1. Entra a **platform.openai.com** con tu cuenta (es la misma cuenta de ChatGPT).
-2. Ve a **Settings → Billing** y carga saldo. La API se cobra aparte de ChatGPT Plus, por imagen generada.
-3. Ve a **API keys → Create new secret key** y copia la clave (empieza con `sk-`).
-4. En Railway, agrégala como variable `OPENAI_API_KEY`. El servicio se reinicia solo.
+1. Entra a **platform.openai.com** con tu cuenta de OpenAI.
+2. Ve a **Settings → Billing** y carga saldo. La API se cobra aparte de ChatGPT Plus, por imagen.
+3. Ve a **API keys → Create new secret key** y copia la clave, que empieza con `sk-`.
 
-Algunas cuentas nuevas deben verificar su organización para usar el modelo de imágenes. Se hace en **Settings → Organization → Verify**. El panel te avisa si es el caso.
-
-¿Prefieres no usar la API? Pídele a ChatGPT que mejore la foto, descárgala y súbela con el botón **Cambiar foto**.
+Algunas cuentas nuevas deben verificar su organización (**Settings → Organization**). Si es tu caso, el panel te avisa.
 
 ---
 
-## Probarlo en tu computador
+## Otras opciones de hosting (de pago)
 
-Requiere Node.js 22.13 o superior.
+- **Render:** **New → Blueprint** con el `render.yaml` incluido, plan Starter con disco.
+- **Railway:** despliega el repositorio, agrega un Volume en `/data` y la variable `ADMIN_PASSWORD`.
+
+Ambas usan `server.js` (Node 22+ con SQLite) y el `Dockerfile`.
+
+## Probarlo en tu computador
 
 ```bash
 npm install
-npm run dev          # contraseña del panel: demo
+npm run dev          # http://localhost:3000  ·  panel: /admin  ·  contraseña: demo
 ```
-
-Abre http://localhost:3000 (carta) y http://localhost:3000/admin (panel).
-
-## Respaldo
-
-Toda la información está en `/data/carta.sqlite`, dentro del volumen de Railway. El panel guarda las últimas 60 versiones publicadas.

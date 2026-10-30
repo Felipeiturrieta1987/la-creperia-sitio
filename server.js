@@ -1,13 +1,12 @@
 'use strict';
 /*
  * La Crepería & Co — carta digital con panel de administración.
- * Node 22+ (usa node:sqlite, sin dependencias nativas), Express y QRCode.
+ * Node 22+ (usa node:sqlite, sin dependencias nativas) y Express.
  */
 const path = require('node:path');
 const fs = require('node:fs');
 const crypto = require('node:crypto');
 const express = require('express');
-const QRCode = require('qrcode');
 const { openDb } = require('./lib/db');
 const ai = require('./lib/ai');
 
@@ -18,7 +17,7 @@ const ON_RAILWAY = !!(process.env.RAILWAY_ENVIRONMENT || process.env.RAILWAY_PRO
 const HAS_VOLUME = !!(process.env.DATA_DIR || process.env.RAILWAY_VOLUME_MOUNT_PATH) || !ON_RAILWAY;
 const SITE_URL = (process.env.SITE_URL || '').replace(/\/+$/, '');
 
-const db = openDb(DATA_DIR, path.join(__dirname, 'seed'));
+const db = openDb(DATA_DIR, path.join(__dirname, 'public', 'seed'));
 if (!ADMIN_PASSWORD) console.warn('[aviso] ADMIN_PASSWORD no está configurada: el panel /admin queda bloqueado.');
 if (!HAS_VOLUME) console.warn('[aviso] No hay volumen persistente: los cambios se perderán en el próximo deploy. Agrega un Volume montado en /data.');
 
@@ -105,7 +104,7 @@ function renderPage(req, mode) {
     .replace(/__OGIMG__/g, escAttr(firstPhoto ? base + '/img/' + firstPhoto : base + '/assets/icon-512.png'))
     .replace(/__V__/g, ASSET_V)
     .replace('__MODE__', mode)
-    .replace('__DATA__', jsonForHtml(menu));
+    .replace('__DATA__', () => jsonForHtml(menu));
 }
 app.get('/', (req, res) => { res.setHeader('Cache-Control', 'no-cache'); res.type('html').send(renderPage(req, 'public')); });
 app.get('/admin', (req, res) => { res.setHeader('Cache-Control', 'no-store'); res.setHeader('X-Robots-Tag', 'noindex'); res.type('html').send(renderPage(req, 'admin')); });
@@ -117,21 +116,6 @@ app.get('/img/:id', (req, res) => {
   if (!img) return res.status(404).end();
   res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   res.type(img.mime).send(Buffer.from(img.data));
-});
-
-/* QR público de la carta (útil para imprimir) */
-app.get('/qr.svg', async (req, res) => {
-  const base = SITE_URL || `${req.protocol}://${req.get('host')}`;
-  const svg = await QRCode.toString(base + '/', { type: 'svg', margin: 2, color: { dark: '#033555', light: '#ffffff' }, errorCorrectionLevel: 'M' });
-  res.type('image/svg+xml').setHeader('Cache-Control', 'public, max-age=3600');
-  if (req.query.download) res.setHeader('Content-Disposition', 'attachment; filename="qr-carta-la-creperia.svg"');
-  res.send(svg);
-});
-app.get('/qr.png', async (req, res) => {
-  const base = SITE_URL || `${req.protocol}://${req.get('host')}`;
-  const buf = await QRCode.toBuffer(base + '/', { type: 'png', margin: 2, width: 1200, color: { dark: '#033555', light: '#ffffff' }, errorCorrectionLevel: 'M' });
-  res.type('image/png').setHeader('Content-Disposition', 'attachment; filename="qr-carta-la-creperia.png"');
-  res.send(buf);
 });
 
 /* ---------- API admin ---------- */

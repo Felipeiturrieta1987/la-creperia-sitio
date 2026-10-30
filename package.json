@@ -8,9 +8,10 @@
     "start": "node --disable-warning=ExperimentalWarning server.js",
     "dev": "ADMIN_PASSWORD=demo node --disable-warning=ExperimentalWarning server.js"
   },
-  "engines": { "node": ">=22.13" },
+  "engines": {
+    "node": ">=22.13"
+  },
   "dependencies": {
-    "express": "^4.21.2",
-    "qrcode": "^1.5.4"
+    "express": "^4.21.2"
   }
 }
