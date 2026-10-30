@@ -1,0 +1,17 @@
+# Configuración para Render (render.com): New → Blueprint → elegir este repositorio.
+services:
+  - type: web
+    name: la-creperia
+    runtime: docker
+    plan: starter          # siempre encendido; el plan gratis no permite disco y se apaga
+    region: virginia       # la región más cercana a Chile
+    healthCheckPath: /healthz
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false        # Render te la pide al crear el servicio
+      - key: DATA_DIR
+        value: /data
+    disk:
+      name: carta-datos
+      mountPath: /data
+      sizeGB: 1
