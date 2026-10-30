@@ -1,0 +1,16 @@
+{
+  "name": "la-creperia-carta",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Carta digital de La Crepería & Co con panel de administración",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "ADMIN_PASSWORD=demo node --disable-warning=ExperimentalWarning server.js"
+  },
+  "engines": { "node": ">=22.13" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4"
+  }
+}

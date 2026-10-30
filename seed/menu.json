@@ -1,0 +1,1584 @@
+{
+ "v": 1,
+ "info": {
+  "nombre": "La Crepería & Co",
+  "lema": "Un rincón para disfrutar sabores artesanales inspirados en la costa, el brunch y los mejores postres.",
+  "ubicacion": "Pichidangui, Chile",
+  "instagram": "lacreperiaco",
+  "horario": "",
+  "pie": "Gracias por ser parte de nuestra mesa",
+  "aviso": "Si tienes alergias o restricciones, consulta a nuestro equipo antes de pedir.",
+  "whatsapp": ""
+ },
+ "grupos": [
+  {
+   "id": "cocina",
+   "nombre": "Cocina"
+  },
+  {
+   "id": "barra",
+   "nombre": "Barra"
+  }
+ ],
+ "categorias": [
+  {
+   "id": "brunch",
+   "grupo": "cocina",
+   "nombre": "Brunch",
+   "nota": ""
+  },
+  {
+   "id": "salados",
+   "grupo": "cocina",
+   "nombre": "Creps & Waffles Salados",
+   "nota": ""
+  },
+  {
+   "id": "dulces",
+   "grupo": "cocina",
+   "nombre": "Creps & Waffles Dulces",
+   "nota": ""
+  },
+  {
+   "id": "croissants",
+   "grupo": "cocina",
+   "nombre": "Croissants Especiales",
+   "nota": ""
+  },
+  {
+   "id": "pasteleria",
+   "grupo": "cocina",
+   "nombre": "Tortas y Pastelería",
+   "nota": ""
+  },
+  {
+   "id": "bolleria",
+   "grupo": "cocina",
+   "nombre": "Bollería",
+   "nota": ""
+  },
+  {
+   "id": "gelato",
+   "grupo": "cocina",
+   "nombre": "Gelato Artesanal",
+   "nota": "Gelato elaborado con receta italiana artesanal. Opciones veganas, sin azúcar y libres de gluten."
+  },
+  {
+   "id": "amazonica",
+   "grupo": "cocina",
+   "nombre": "Amazónica",
+   "nota": "Toppings incluidos: avena, maní, plátano, coco, leche condensada y frutillas. Toppings premium +$600: Nutella, arándanos, mantequilla de maní, manjar, mango, maracuyá, Oreo o pistacho. Proteína vegetal +$2.000."
+  },
+  {
+   "id": "cafe",
+   "grupo": "barra",
+   "nombre": "Café Clásico",
+   "nota": "Americano y latte disponibles calientes o fríos."
+  },
+  {
+   "id": "casa",
+   "grupo": "barra",
+   "nombre": "De la Casa",
+   "nota": "Nuestras bebidas de autor con cold foam."
+  },
+  {
+   "id": "matcha",
+   "grupo": "barra",
+   "nombre": "Matcha",
+   "nota": ""
+  },
+  {
+   "id": "tiramisu",
+   "grupo": "barra",
+   "nombre": "Tiramisú & Affogato",
+   "nota": ""
+  },
+  {
+   "id": "chocolates",
+   "grupo": "barra",
+   "nombre": "Chocolates Calientes",
+   "nota": ""
+  },
+  {
+   "id": "tes",
+   "grupo": "barra",
+   "nombre": "Tés e Infusiones",
+   "nota": ""
+  },
+  {
+   "id": "jugos",
+   "grupo": "barra",
+   "nombre": "Jugos y Brebajes Funcionales",
+   "nota": ""
+  },
+  {
+   "id": "milkshakes",
+   "grupo": "barra",
+   "nombre": "Milkshakes",
+   "nota": "Extras +$1.000: marshmallow fundido, crema batida, Nutella o salsas."
+  },
+  {
+   "id": "refrescantes",
+   "grupo": "barra",
+   "nombre": "Refrescantes",
+   "nota": ""
+  }
+ ],
+ "productos": [
+  {
+   "id": "p1",
+   "cat": "brunch",
+   "nombre": "Brunch Tostadas Francesas",
+   "desc": "Tostadas francesas con canela, syrup, fruta fresca de temporada, croissant de queso, jugo natural y café o té.",
+   "precio": 10500,
+   "tags": [
+    "fav"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p2",
+   "cat": "brunch",
+   "nombre": "Brunch Panqueques",
+   "desc": "Mini pancakes, frutas frescas, salsa de chocolate, manjar y Nutella, croissant de queso y pesto, jugo natural y café o té.",
+   "precio": 11500,
+   "tags": [
+    "fav",
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p3",
+   "cat": "brunch",
+   "nombre": "Brunch Croissant",
+   "desc": "Croissant tibio de jamón de pavo y queso, muffin, porción de torta del día, jugo natural y café o té.",
+   "precio": 8500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p4",
+   "cat": "brunch",
+   "nombre": "Brunch Roll de Canela",
+   "desc": "Roll artesanal, mini waffle de queso, crep de manjar, jugo natural y café o té.",
+   "precio": 14500,
+   "tags": [
+    "fav"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p5",
+   "cat": "brunch",
+   "nombre": "Brunch Salmón",
+   "desc": "Crep de salmón ahumado, queso crema, mix verde, alcaparras, mini crep dulce, media luna, jugo natural y café o té.",
+   "precio": 14500,
+   "tags": [
+    "fav"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p6",
+   "cat": "brunch",
+   "nombre": "Brunch Amazónica",
+   "desc": "Bowl de açaí orgánico, frutas frescas, granola artesanal, croissant de jamón y queso, jugo natural y café o té.",
+   "precio": 15500,
+   "tags": [
+    "vegano"
+   ],
+   "foto": "brunch-amazonica",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p7",
+   "cat": "salados",
+   "nombre": "Quilimarino",
+   "desc": "Tomates asados, queso de cabra cordillerano, albahaca fresca y aceite de oliva.",
+   "precio": 9500,
+   "tags": [
+    "vegano"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p8",
+   "cat": "salados",
+   "nombre": "Jamón y Queso",
+   "desc": "Jamón y queso fundido.",
+   "precio": 8500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p9",
+   "cat": "salados",
+   "nombre": "Pollo Pesto",
+   "desc": "Pollo grillado, pesto artesanal y mozzarella fundida.",
+   "precio": 9990,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p10",
+   "cat": "salados",
+   "nombre": "Camarón Pil Pil",
+   "desc": "Camarones nacionales salteados al ajillo, queso fundido y cebolla caramelizada.",
+   "precio": 10500,
+   "tags": [
+    "fav"
+   ],
+   "foto": "camaron-pil-pil",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p11",
+   "cat": "salados",
+   "nombre": "Jaiba Cremosa",
+   "desc": "Jaiba cremosa gratinada con queso mantecoso.",
+   "precio": 10500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p12",
+   "cat": "salados",
+   "nombre": "Receta de la Abu",
+   "desc": "Carne mechada cocinada lentamente, salsa de tomate casera y queso mantecoso.",
+   "precio": 11500,
+   "tags": [
+    "fav"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p13",
+   "cat": "dulces",
+   "nombre": "Manjar",
+   "desc": "Relleno de manjar.",
+   "precio": 4000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p14",
+   "cat": "dulces",
+   "nombre": "Manjar + Fruta",
+   "desc": "Manjar y fruta fresca.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p15",
+   "cat": "dulces",
+   "nombre": "Manjar + Fruta + Helado + Crema",
+   "desc": "Manjar, fruta fresca, helado y crema chantilly.",
+   "precio": 6800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p16",
+   "cat": "dulces",
+   "nombre": "Avellana",
+   "desc": "Crema de avellanas.",
+   "precio": 4000,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p17",
+   "cat": "dulces",
+   "nombre": "Avellana + Fruta",
+   "desc": "Crema de avellanas y fruta fresca.",
+   "precio": 4800,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p18",
+   "cat": "dulces",
+   "nombre": "Avellana + Fruta + Helado + Crema",
+   "desc": "Crema de avellanas, fruta fresca, helado y crema chantilly.",
+   "precio": 6800,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p19",
+   "cat": "dulces",
+   "nombre": "Dubai Pistacho",
+   "desc": "Crema de pistachos, fudge de chocolate y frutas frescas.",
+   "precio": 7500,
+   "tags": [
+    "fav",
+    "nueces"
+   ],
+   "foto": "dubai-pistacho",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p20",
+   "cat": "dulces",
+   "nombre": "Crema de Maní",
+   "desc": "Crema de maní y fruta fresca.",
+   "precio": 4800,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p21",
+   "cat": "dulces",
+   "nombre": "Crema de Maní Premium",
+   "desc": "Crema de maní, fruta fresca, helado y crema chantilly.",
+   "precio": 6800,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p22",
+   "cat": "dulces",
+   "nombre": "Mango Chamoy",
+   "desc": "Mango, leche condensada, Tajín, helado y crema.",
+   "precio": 6800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p23",
+   "cat": "dulces",
+   "nombre": "Manjar Lúcuma",
+   "desc": "Crema natural de lúcuma, manjar blanco y crema batida.",
+   "precio": 6800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p24",
+   "cat": "dulces",
+   "nombre": "Biscoff",
+   "desc": "Salsa Biscoff, galletas Biscoff, frutillas, helado y crema chantilly.",
+   "precio": 7800,
+   "tags": [
+    "fav"
+   ],
+   "foto": "biscoff",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p25",
+   "cat": "dulces",
+   "nombre": "Oreo",
+   "desc": "Crema de Oreo, helado artesanal y crema chantilly.",
+   "precio": 6800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p26",
+   "cat": "croissants",
+   "nombre": "Pie de Limón",
+   "desc": "Croissant relleno de curd de limón y crema chantilly.",
+   "precio": 4400,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "cr-limon",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p27",
+   "cat": "croissants",
+   "nombre": "Nutella & Frutillas",
+   "desc": "Relleno de Nutella y frutillas frescas.",
+   "precio": 4400,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "cr-nutella",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p28",
+   "cat": "croissants",
+   "nombre": "Caramelo Salado",
+   "desc": "Crema pastelera, caramelo salado y topping crocante de maní.",
+   "precio": 4500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "cr-caramelo",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p29",
+   "cat": "croissants",
+   "nombre": "Pistacho",
+   "desc": "Crema pastelera de pistacho, baño de chocolate y pistachos crocantes.",
+   "precio": 4500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "cr-pistacho",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p30",
+   "cat": "croissants",
+   "nombre": "Jamón y Queso",
+   "desc": "Croissant horneado con jamón y queso fundido.",
+   "precio": 3500,
+   "tags": [],
+   "foto": "cr-jamon",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p31",
+   "cat": "pasteleria",
+   "nombre": "Tostadas Francesas",
+   "desc": "Pan brioche dorado en mantequilla, canela, syrup de maple, frutillas y nueces tostadas.",
+   "precio": 6500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "tostadas-francesas",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p32",
+   "cat": "pasteleria",
+   "nombre": "Crumble de Manzana",
+   "desc": "Tarta tibia de manzanas con salsa de caramelo.",
+   "precio": 4000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p33",
+   "cat": "pasteleria",
+   "nombre": "Hojarasca Manjar",
+   "desc": "Capas de hojarasca artesanal rellenas de manjar.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p34",
+   "cat": "pasteleria",
+   "nombre": "Torta Caluga",
+   "desc": "Bizcocho de caluga con frambuesas y nueces tostadas.",
+   "precio": 4500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p35",
+   "cat": "pasteleria",
+   "nombre": "Carrot Cake",
+   "desc": "Bizcocho de zanahoria y nueces con suave frosting de queso crema.",
+   "precio": 4000,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p36",
+   "cat": "bolleria",
+   "nombre": "Roll de Canela",
+   "desc": "Remolino de canela con frosting de vainilla.",
+   "precio": 2500,
+   "tags": [],
+   "foto": "roll-canela",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p37",
+   "cat": "bolleria",
+   "nombre": "Medialuna",
+   "desc": "Croissant tradicional de mantequilla.",
+   "precio": 500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p38",
+   "cat": "bolleria",
+   "nombre": "Barquillo Relleno",
+   "desc": "Crujiente barquillo relleno de crema.",
+   "precio": 3000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p39",
+   "cat": "bolleria",
+   "nombre": "Cuchuflí Relleno",
+   "desc": "Tradicional cuchuflí relleno de manjar.",
+   "precio": 1000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p40",
+   "cat": "bolleria",
+   "nombre": "Crumble Cookies",
+   "desc": "Galleta crocante con crumble artesanal.",
+   "precio": 2500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p41",
+   "cat": "bolleria",
+   "nombre": "Muffins",
+   "desc": "Chocolate, arándanos o frambuesa.",
+   "precio": 2000,
+   "tags": [],
+   "foto": "muffins",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p42",
+   "cat": "bolleria",
+   "nombre": "Brownie",
+   "desc": "",
+   "precio": 2500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p43",
+   "cat": "bolleria",
+   "nombre": "Macarons",
+   "desc": "",
+   "precio": 2000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p44",
+   "cat": "gelato",
+   "nombre": "Copa Kids",
+   "desc": "Tulipa de galleta con tres mini bolas de helado, crema y topping a elección.",
+   "precio": 3900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p45",
+   "cat": "gelato",
+   "nombre": "Sandwich Helado",
+   "desc": "Tu sabor favorito entre dos galletas wafer con topping a elección.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p46",
+   "cat": "gelato",
+   "nombre": "Brownie con Helado",
+   "desc": "Brownie tibio de chocolate belga, helado, salsa de chocolate y crema chantilly.",
+   "precio": 5000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p47",
+   "cat": "gelato",
+   "nombre": "Café Helado",
+   "desc": "Espresso italiano, leche, helado, crema y cuchuflí.",
+   "precio": 5000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p48",
+   "cat": "gelato",
+   "nombre": "Banana Split",
+   "desc": "Plátano, tres bolas de helado, crema y salsa de caramelo.",
+   "precio": 5000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p49",
+   "cat": "gelato",
+   "nombre": "Dubai Chocolate",
+   "desc": "Copa de helado de pistacho, helado de chocolate, crema de pistacho y salsa de chocolate.",
+   "precio": 6500,
+   "tags": [
+    "fav",
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p50",
+   "cat": "gelato",
+   "nombre": "Cheesecake Berries",
+   "desc": "Copa de helado de vainilla, helado de frambuesa, salsa de berries y crema.",
+   "precio": 6500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p51",
+   "cat": "gelato",
+   "nombre": "Caramelo Salado",
+   "desc": "Copa de helado de vainilla, helado de caramelo salado, crema y topping crocante.",
+   "precio": 6500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p52",
+   "cat": "gelato",
+   "nombre": "Lemon Pie",
+   "desc": "Copa de helado de limón, merengue crocante, helado de vainilla y crema de limón.",
+   "precio": 6500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p53",
+   "cat": "gelato",
+   "nombre": "Oreo",
+   "desc": "Copa de helado cookies & cream, Oreo triturada, salsa de chocolate y crema.",
+   "precio": 6000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p54",
+   "cat": "amazonica",
+   "nombre": "Bowl Amazónica",
+   "desc": "Açaí en bowl con toppings incluidos a elección.",
+   "precio": 8900,
+   "tags": [],
+   "foto": "bowl-amazonica",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p55",
+   "cat": "amazonica",
+   "nombre": "Vaso Amazónica",
+   "desc": "Açaí en vaso con toppings incluidos a elección.",
+   "precio": 5500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p56",
+   "cat": "cafe",
+   "nombre": "Espresso Italiano",
+   "desc": "Clásico espresso corto e intenso.",
+   "precio": 2900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p57",
+   "cat": "cafe",
+   "nombre": "Espresso Doble",
+   "desc": "Doble shot de espresso.",
+   "precio": 3900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p58",
+   "cat": "cafe",
+   "nombre": "Americano",
+   "desc": "Espresso alargado con agua caliente.",
+   "precio": 3500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p59",
+   "cat": "cafe",
+   "nombre": "Cappuccino",
+   "desc": "",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p60",
+   "cat": "cafe",
+   "nombre": "Flat White",
+   "desc": "",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p61",
+   "cat": "cafe",
+   "nombre": "Latte",
+   "desc": "Espresso y leche.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p62",
+   "cat": "cafe",
+   "nombre": "Latte Cold Foam",
+   "desc": "Latte con cold foam de vainilla.",
+   "precio": 5300,
+   "tags": [],
+   "foto": "latte-cold-foam",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p63",
+   "cat": "cafe",
+   "nombre": "Mocha",
+   "desc": "Latte con un toque de chocolate.",
+   "precio": 4800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p64",
+   "cat": "cafe",
+   "nombre": "Cold Brew",
+   "desc": "Café extraído en frío por varias horas.",
+   "precio": 4000,
+   "tags": [],
+   "foto": "cold-brew",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p65",
+   "cat": "cafe",
+   "nombre": "Filtrado V60 para uno",
+   "desc": "Café de filtro, 250 ml.",
+   "precio": 3900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p66",
+   "cat": "cafe",
+   "nombre": "Filtrado V60 para dos",
+   "desc": "Café de filtro, 500 ml.",
+   "precio": 5900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p67",
+   "cat": "casa",
+   "nombre": "Mont Blanc",
+   "desc": "Cold brew o americano con cold foam de naranja.",
+   "precio": 4800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p68",
+   "cat": "casa",
+   "nombre": "Caramel Spresso Vainilla",
+   "desc": "Hielo, leche, helado, espresso y salsa de caramelo.",
+   "precio": 5800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p69",
+   "cat": "casa",
+   "nombre": "Flan de Caramelo",
+   "desc": "Leche, hielo, cold foam de vainilla, salsa de caramelo, café y flan.",
+   "precio": 6300,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p70",
+   "cat": "casa",
+   "nombre": "Caramelo Salado",
+   "desc": "Leche, espresso, hielo, caramelo y cold foam de caramelo con un toque de sal.",
+   "precio": 6900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p71",
+   "cat": "casa",
+   "nombre": "Spanish Latte",
+   "desc": "Leche condensada, espresso, hielo, leche y cold foam de lechera con un toque de canela.",
+   "precio": 5900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p72",
+   "cat": "casa",
+   "nombre": "Latte Tres Leches",
+   "desc": "Leche, café, hielo, manjar, canela, leche evaporada, salsa de manjar, leche condensada y cold foam de vainilla.",
+   "precio": 6300,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p73",
+   "cat": "casa",
+   "nombre": "Caramel Macchiato",
+   "desc": "Hielo, leche fría, vainilla, 1 shot de espresso y salsa de caramelo.",
+   "precio": 5900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p74",
+   "cat": "casa",
+   "nombre": "Iced Black Honey Lemon",
+   "desc": "Hielo, miel, limón, agua y café.",
+   "precio": 4800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p75",
+   "cat": "casa",
+   "nombre": "Jamaica Energy",
+   "desc": "Agua de Jamaica mexicana con bebida energética Monster.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p76",
+   "cat": "casa",
+   "nombre": "Jamaica Coconut",
+   "desc": "Agua de coco dulce y cold foam de jamaica.",
+   "precio": 5000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p77",
+   "cat": "matcha",
+   "nombre": "Matcha Latte",
+   "desc": "Matcha japonés premium molido en piedra, leche y hielo.",
+   "precio": 4900,
+   "tags": [],
+   "foto": "matcha-latte",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p78",
+   "cat": "matcha",
+   "nombre": "Strawberry Matcha",
+   "desc": "Salsa de frutillas, leche, matcha y cold foam de matcha.",
+   "precio": 6300,
+   "tags": [],
+   "foto": "strawberry-matcha",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p79",
+   "cat": "matcha",
+   "nombre": "Coconut Matcha",
+   "desc": "Agua de coco dulce con cold foam de matcha.",
+   "precio": 5900,
+   "tags": [],
+   "foto": "coconut-matcha",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p80",
+   "cat": "matcha",
+   "nombre": "Matcha Mango",
+   "desc": "Mango natural molido, hielo, leche, 4 g de matcha japonés y cold foam.",
+   "precio": 6200,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p81",
+   "cat": "tiramisu",
+   "nombre": "Affogato",
+   "desc": "Helado de vainilla y almendra (100 g) con salsa de caramelo toffee y un shot de espresso.",
+   "precio": 4500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p82",
+   "cat": "tiramisu",
+   "nombre": "Affogato Doble",
+   "desc": "Doble porción de helado de vainilla y almendra (200 g), salsa de caramelo toffee y doble shot de espresso.",
+   "precio": 5500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p83",
+   "cat": "tiramisu",
+   "nombre": "Affogato Pistacho",
+   "desc": "Crema de pistacho, helado de vainilla, capa de pistachos molidos y un espresso italiano (200 g).",
+   "precio": 5500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p84",
+   "cat": "tiramisu",
+   "nombre": "Espresso Tiramisú",
+   "desc": "Una copa con espresso, crema de tiramisú, chocolate dulce y una galleta, más una bandeja con 7 tiramisú balls. Pincha las bolitas, mójalas en la crema y mezcla la crema de la copa con el espresso.",
+   "precio": 7900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p85",
+   "cat": "tiramisu",
+   "nombre": "Latte Tiramisú",
+   "desc": "Latte tradicional con crema de tiramisú y un trozo de pastel de tiramisú encima.",
+   "precio": 6000,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p86",
+   "cat": "chocolates",
+   "nombre": "Hot Chocolate",
+   "desc": "Chocolate caliente preparado con cacao 100%. Elige leche tradicional o vegetal y agrega canela.",
+   "precio": 4500,
+   "tags": [
+    "vegetal"
+   ],
+   "foto": "hot-chocolate",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p87",
+   "cat": "chocolates",
+   "nombre": "Hot Chocolate Blanco",
+   "desc": "Chocolate blanco caliente preparado con leche tradicional o vegetal.",
+   "precio": 4500,
+   "tags": [
+    "vegetal"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p88",
+   "cat": "tes",
+   "nombre": "Té de Limón",
+   "desc": "Té de jazmín servido con rodajas de limón fresco.",
+   "precio": 2500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p89",
+   "cat": "tes",
+   "nombre": "Taza de Té",
+   "desc": "Selección de hojas de té e infusiones aromáticas.",
+   "precio": 2500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p90",
+   "cat": "tes",
+   "nombre": "Tetera Individual",
+   "desc": "Variedades: chai, Earl Grey, Ceylán (negro), verde, azul (oolong), blanco, rojo o jazmín.",
+   "precio": 4900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p91",
+   "cat": "tes",
+   "nombre": "Té Latte",
+   "desc": "Tu hoja favorita infusionada en leche.",
+   "precio": 2900,
+   "tags": [
+    "vegetal"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p92",
+   "cat": "tes",
+   "nombre": "Chai Latte",
+   "desc": "Mezcla especiada de té chai y leche tradicional o vegetal.",
+   "precio": 2900,
+   "tags": [
+    "vegetal"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p93",
+   "cat": "tes",
+   "nombre": "Té Helado",
+   "desc": "Perfecto para acompañar crepes y waffles.",
+   "precio": 2500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p94",
+   "cat": "tes",
+   "nombre": "Jarra de Té Helado",
+   "desc": "Ideal para compartir.",
+   "precio": 5900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p95",
+   "cat": "tes",
+   "nombre": "Bubble Tea",
+   "desc": "Té negro, leche evaporada, leche condensada, hielo, caramelo y bolitas de tapioca.",
+   "precio": 4800,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p96",
+   "cat": "jugos",
+   "nombre": "Jugos Naturales",
+   "desc": "Frutilla, frambuesa, mango, maracuyá o mix berries.",
+   "precio": 3500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p97",
+   "cat": "jugos",
+   "nombre": "Detox",
+   "desc": "Piña, espinaca, apio, jengibre y pepino.",
+   "precio": 4500,
+   "tags": [
+    "vegano"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p98",
+   "cat": "jugos",
+   "nombre": "Antiinflamatorio",
+   "desc": "Piña, apio y jengibre.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p99",
+   "cat": "jugos",
+   "nombre": "Vitamínico",
+   "desc": "Naranja, zanahoria, apio y jengibre.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p100",
+   "cat": "jugos",
+   "nombre": "Hidratante",
+   "desc": "Frutilla, manzana verde, pepino y apio.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p101",
+   "cat": "jugos",
+   "nombre": "Kombucha",
+   "desc": "Bebida fermentada rica en probióticos, beneficiosa para la digestión y el metabolismo.",
+   "precio": 2900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p102",
+   "cat": "milkshakes",
+   "nombre": "Oreo",
+   "desc": "",
+   "precio": 5500,
+   "tags": [],
+   "foto": "milkshake",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p103",
+   "cat": "milkshakes",
+   "nombre": "KitKat",
+   "desc": "",
+   "precio": 5500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p104",
+   "cat": "milkshakes",
+   "nombre": "Ferrero",
+   "desc": "",
+   "precio": 5500,
+   "tags": [
+    "nueces"
+   ],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p105",
+   "cat": "milkshakes",
+   "nombre": "Banana Split",
+   "desc": "",
+   "precio": 5500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p106",
+   "cat": "milkshakes",
+   "nombre": "Biscoff",
+   "desc": "",
+   "precio": 5500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p107",
+   "cat": "refrescantes",
+   "nombre": "Limonada Frutilla",
+   "desc": "Salsa de frutillas, limonada, hielo, menta y cold foam de frutilla.",
+   "precio": 4500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p108",
+   "cat": "refrescantes",
+   "nombre": "Butterfly Lemon",
+   "desc": "Limonada, butterfly pea y hielo. Cambia de color al mezclarla con el limón.",
+   "precio": 3900,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p109",
+   "cat": "refrescantes",
+   "nombre": "Agua de Jamaica",
+   "desc": "Jugo de flor de Jamaica con hielo, preparada al estilo mexicano.",
+   "precio": 3500,
+   "tags": [],
+   "foto": "jamaica",
+   "agotado": false,
+   "oculto": false
+  },
+  {
+   "id": "p110",
+   "cat": "refrescantes",
+   "nombre": "Bebidas",
+   "desc": "",
+   "precio": 1500,
+   "tags": [],
+   "foto": "",
+   "agotado": false,
+   "oculto": false
+  }
+ ],
+ "bowl": {
+  "activo": true,
+  "titulo": "Arma tu Bowl",
+  "desc": "Puré de açaí orgánico cremoso con guaraná.",
+  "sellos": [
+   "Orgánico",
+   "Energizante",
+   "Gluten free"
+  ],
+  "tamanos": [
+   {
+    "id": "go",
+    "nombre": "Go",
+    "ml": 266,
+    "precio": 5990
+   },
+   {
+    "id": "classic",
+    "nombre": "Classic",
+    "ml": 355,
+    "precio": 6990
+   },
+   {
+    "id": "big",
+    "nombre": "Big",
+    "ml": 473,
+    "precio": 8990
+   },
+   {
+    "id": "full",
+    "nombre": "Full",
+    "ml": 710,
+    "precio": 12990
+   }
+  ],
+  "incluidos": [
+   "Granola avena y miel",
+   "Chia pudding",
+   "Coco laminado",
+   "Coco rallado",
+   "Leche condensada",
+   "Granola cacao crunchy",
+   "Leche Nido",
+   "Avena",
+   "Chía",
+   "Maní",
+   "Plátano"
+  ],
+  "extras": [
+   {
+    "id": "e1",
+    "nombre": "Frutilla",
+    "precio": 350,
+    "agotado": false
+   },
+   {
+    "id": "e2",
+    "nombre": "Cacao nibs",
+    "precio": 490,
+    "agotado": false
+   },
+   {
+    "id": "e3",
+    "nombre": "Mantequilla de almendra",
+    "precio": 590,
+    "agotado": false
+   },
+   {
+    "id": "e4",
+    "nombre": "Mantequilla de maní",
+    "precio": 590,
+    "agotado": false
+   },
+   {
+    "id": "e5",
+    "nombre": "Granola sin azúcar",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e6",
+    "nombre": "Castañas de cajú",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e7",
+    "nombre": "Nutella",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e8",
+    "nombre": "Miel",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e9",
+    "nombre": "Chips de chocolate",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e10",
+    "nombre": "Oreo",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e11",
+    "nombre": "Crumble clásico",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e12",
+    "nombre": "Crema Oreo de avellana Zero",
+    "precio": 690,
+    "agotado": false
+   },
+   {
+    "id": "e13",
+    "nombre": "Almendras laminadas",
+    "precio": 990,
+    "agotado": false
+   },
+   {
+    "id": "e14",
+    "nombre": "Arándanos",
+    "precio": 990,
+    "agotado": false
+   },
+   {
+    "id": "e15",
+    "nombre": "Avellanas europeas",
+    "precio": 990,
+    "agotado": false
+   },
+   {
+    "id": "e16",
+    "nombre": "Paçoca",
+    "precio": 990,
+    "agotado": false
+   },
+   {
+    "id": "e17",
+    "nombre": "Nueces picadas",
+    "precio": 990,
+    "agotado": false
+   },
+   {
+    "id": "e18",
+    "nombre": "Mantequilla de pistacho",
+    "precio": 1390,
+    "agotado": false
+   },
+   {
+    "id": "e19",
+    "nombre": "Colágeno hidrolizado",
+    "precio": 1490,
+    "agotado": false
+   },
+   {
+    "id": "e20",
+    "nombre": "Proteína",
+    "precio": 2490,
+    "agotado": false
+   },
+   {
+    "id": "e21",
+    "nombre": "Proteína vegana",
+    "precio": 3290,
+    "agotado": false
+   }
+  ],
+  "foto": "bowl-amazonica"
+ }
+}
